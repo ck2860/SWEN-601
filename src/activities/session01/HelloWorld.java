@@ -1,7 +1,10 @@
+
 package activities.session01;
 
 public class HelloWorld {
-    // this is comment
+    /**
+     * This function prints "Hello World"
+     */
     public static void main(String[] args) {
         System.out.println("Hello World");
     }

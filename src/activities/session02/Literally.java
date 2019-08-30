@@ -1,6 +1,9 @@
 package activities.session02;
 
 public class Literally {
+    /**
+     * This function prints a natural number, a floating point number, a character, a String, and a boolean respectively.
+     */
     public static void main(String[] args) {
         System.out.println(4);
         System.out.println(3.41);
