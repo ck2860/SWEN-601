@@ -29,10 +29,10 @@ public class Calculator {
      * @return the given weight in kilograms.
      */
 
-    public static float convert(float pounds) {
+    public static double convert(double pounds) {
         System.out.println("pounds: " + pounds);
         System.out.println("kilos: " + (pounds/2.2));
-        return (float) (pounds/2.2);
+        return (pounds/2.2);
     }
     /**
      * The first System.out was used for prompt
@@ -54,8 +54,8 @@ public class Calculator {
         calculate(4,6 );
         calculate(5,3);
         calculate(8, 9);
-        float result = convert((float)186.2);
-        float result1 = convert((float)207);
+        double result = convert( 186.2);
+        double result1 = convert(207);
         System.out.println("total: " + (result+result1));
 
     }
