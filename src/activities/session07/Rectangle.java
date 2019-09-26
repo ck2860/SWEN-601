@@ -9,9 +9,22 @@ public class Rectangle extends Shape {
         this.width = width;
         this.height = height;
     }
+
+    @Override
+    public double getArea(){
+        return width * height;
+    }
+
+    @Override
+    public double getPerimeter(){
+        return width*2 + height*2;
+    }
+
+
     public static void main(String[] args) {
-        Rectangle r = new Rectangle(new Position(30, 50), 50, 50);
+        Rectangle r = new Rectangle(new Position(100, 100), 200, 100);
         System.out.println(r.getArea());
         System.out.println(r.getPerimeter());
+//        System.out.println(r.scale(2));
     }
 }
