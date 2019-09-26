@@ -10,10 +10,10 @@ public class Literally {
         System.out.println('A');
         System.out.println("Apple");
         System.out.println(true);
-        int x = 12 + 10;
-        float y = 3.14f;
-        float z=  x + y;
-        System.out.println(z);
+//        int x = 12 + 10;
+//        float y = 3.14f;
+//        float z=  x + y;
+//        System.out.println(z);
 
     }
 }
