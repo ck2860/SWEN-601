@@ -8,13 +8,13 @@ public class EvensandOdds {
         int number;
 
         do {
-            System.out.println("Enter a number: ");
+            System.out.print("Enter a number: ");
             number = scanner.nextInt();
             if (number % 2 == 0) {
-                System.out.println("Even");
+                System.out.println("Even.");
               }
             else {
-                System.out.println("Odd");
+                System.out.println("Odd.");
             }
         } while (number != 0);
         System.out.println("Done!");

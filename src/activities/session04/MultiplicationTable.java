@@ -16,8 +16,7 @@ public class MultiplicationTable {
             }
         }
 
-        System.out.print(value);
-
+//        System.out.print(value);
         return value;
     }
     public static void main(String[] args) {
