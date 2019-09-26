@@ -7,14 +7,8 @@ public class Dog {
     private float weight;
     private int age;
     private String bark;
+//    private String breed;
 
-//    // initializing constructors
-//    public Dog(String n, float w, int a, String b){
-//        n=name;
-//        w =weight;
-//        a=age;
-//        b = bark;
-//    }
 
     public Dog(String name, float weight, int age, String bark) {
         this.name = name;
@@ -22,11 +16,10 @@ public class Dog {
         this.age = age;
         this.bark = bark;
     }
-
-    // parameterless constructor
-    Dog() {
-        name = "cat";
-        bark = "yip";
+    //Parameterless
+    public Dog() {
+        name = "Millie";
+        age = 12;
     }
 
     // chaining constructor
@@ -34,9 +27,6 @@ public class Dog {
         this(name, 23, 12, "woooof!");
     }
 
-    //    public Dog(){
-//        this("3",12, 0,"Yip");
-//    }
 //
     public void birthday(int age) {
         age = age + 1;
@@ -51,19 +41,44 @@ public class Dog {
     public void feed(float calories) {
         weight += (3000 / calories);
     }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name=name;
-//    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name=name;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setBark(String bark) {
+        this.bark = bark;
+    }
+
+    public String getBark(){
+        return bark;
+    }
+    @Override
+    public String toString() {
+        return "Dog [ name= " + getName() + ", age= " + getAge() + "]";
+    }
     public static void main(String[] args) {
+        Dog dog1 = new Dog();
+        System.out.println(dog1.name);
         Dog buttercup = new Dog("Buttercup", 62, 8, "woof");
         Dog thunder = new Dog("Thunder", 60, 13, "woof");
-        Dog puppy = new Dog();
+        System.out.println(buttercup.name);
+        System.out.println(buttercup.age);
+        System.out.println(thunder.name);
+        System.out.println(thunder.age);
+        Dog puppy = new Dog("Harry");
         System.out.println(puppy.name);
         buttercup.birthday(13);
 //        System.out.println(dog1.age);
@@ -72,6 +87,10 @@ public class Dog {
         System.out.println(buttercup.weight);
         buttercup.feed(1000);
         System.out.println(buttercup.weight);
+        System.out.println(buttercup);
+        System.out.println(thunder);
+        System.out.println(puppy);
+        System.out.println(dog1);
     }
 }
 

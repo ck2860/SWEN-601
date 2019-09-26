@@ -1,21 +1,25 @@
 package activities.session06;
 
-import java.lang.annotation.Documented;
-
 public class Car {
     private Make make;
-    private String Model;
-    private int Year;
-    private String Color;
+    private String model;
+    private int year;
+    private String color;
     private String VIN;
+    private static int CAR_COUNT = 0;
 
-//     initializing constructor
+    //     initializing constructor
     public Car(Make _make, String Model, int Year, String Color, String VIN) {
         this.make = _make;
-        this.Model = Model;
-        this.Year = Year;
-        this.Color = Color;
+        this.model = Model;
+        this.year = Year;
+        this.color = Color;
         this.VIN = VIN;
+        CAR_COUNT =  CAR_COUNT + 1;
+    }
+
+    public static int getCarCount() {
+        return CAR_COUNT;
     }
 
     public Make getMake() {
@@ -23,15 +27,15 @@ public class Car {
     }
 
     public String getModel() {
-        return Model;
+        return model;
     }
 
     public int getYear() {
-        return Year;
+        return year;
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public String getVIN() {
@@ -39,30 +43,44 @@ public class Car {
     }
 
     public void setColor(String colour) {
-        this.Color = colour;
+        this.color = colour;
     }
 
-//    @Override
-//    public boolean equals (Object obj){
-//        if (obj instanceof Car) {
-//            Car car  = (Car)obj;
-//            return Car.Color.equals(this.Color);
-////        }
-//
-//
-////    @Override
-////    public String toString() {
-////        return "Car[Make= " + getMake() + "Model = +" + getModel() + "Year=" + getYear() + "Color=" + getColor() + "VIN=" + getVIN() + "]";
-////    }
-//
-//    public static void main(String[] args) {
-//        Car dart1 = new Car(Make.Ford, "Dart", 2013, "Tungsten", "1234523242");
-//        Car dart2 = new Car(Make.Ford, "Dart", 2013, "Tungsten", "1234523242");
-//        Car equiox = new Car(Make.Dodge, "Equinox", 2013, "Tungsten", "1234523242");
-//
-//        System.out.println(dart1.toString());
-//
-//        System.out.println(dart1.equals(dart2));
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Car) {
+            Car car = (Car) obj;
+            return car.color.equals(this.color);
+        }
+        return false;
     }
+
+
+    @Override
+    public String toString() {
+        return "Car[Make= " + getMake()
+                + "Model = +" + getModel()
+                + "Year=" + getYear()
+                + "Color=" + getColor()
+                + "VIN=" + getVIN() + "]";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(CAR_COUNT);
+        Car dart1 = new Car(Make.Dodge, "Dart", 2013, "Tungsten", "1234523242");
+        System.out.println(CAR_COUNT);
+        Car dart2 = new Car(Make.Dodge, "Dart", 2013, "Tungsten", "1234523242");
+        System.out.println(CAR_COUNT);
+        Car equiox = new Car(Make.Ford, "Equinox", 2010, "Mocha", "1234523298");
+        System.out.println(CAR_COUNT);
+        System.out.println("Dart 1: " +dart1);
+        System.out.println("Dart 2: " +dart2);
+        System.out.println("Equiox:" +equiox);
+        System.out.println("dart1.equals(dart2): " +dart1.equals(dart2));
+        System.out.println("dart1 == dart 2: " + (dart1 == dart2));
+        System.out.println("dart1.equals(equiox): " +dart1.equals(equiox));
+
+    }
+}
 
 
