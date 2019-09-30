@@ -1,4 +1,7 @@
-
+/* SWEN-601
+ * Condy Kan
+ * ck2860@rit.edu
+ */
 package activities.session01;
 
 public class HelloWorld {

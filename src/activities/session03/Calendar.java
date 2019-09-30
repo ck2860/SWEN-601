@@ -1,8 +1,19 @@
+/* SWEN-601
+ * Condy Kan
+ * ck2860@rit.edu
+ */
 package activities.session03;
-
+/*
+* this is for scanner, to get the user's input.
+ */
 import java.util.Scanner;
 
 public class Calendar {
+    /**
+     * this method is for the day date, the switch statement is executed for the suffix.
+     * @param D is a number that an user enters for a day
+     * @return a string for suffix.
+     */
     public static String dayDate(int D) {
         String suffix;
         if (D < 32) {
@@ -37,6 +48,13 @@ public class Calendar {
         }
         return suffix;
     }
+
+    /**
+     * The scanner was used to get the user's input
+     * The prompt was used to let the user know she/he needs to enter a number/day
+     * the day function is executed so it prints a day with suffix.
+     * @param args is a part of main method, for command arguments.
+     */
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,3 +1,7 @@
+/* SWEN-601
+ * Condy Kan
+ * ck2860@rit.edu
+ */
 package activities.session02;
 
 public class Expressions {
@@ -6,6 +10,7 @@ public class Expressions {
      * the int variable y is defined/calculated as 8/2*6.
      * the int variable z is defined x + y.
      * prints all of three variables (x, y, and z).
+     * @param args is a part of main method, for command arguments.
      */
     public static void main(String[] args) {
         int x = 2;

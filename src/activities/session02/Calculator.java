@@ -1,3 +1,7 @@
+/* SWEN-601
+ * Condy Kan
+ * ck2860@rit.edu
+ */
 package activities.session02;
 /**
  * Using java.util.Scanner class as standard input
@@ -44,6 +48,7 @@ public class Calculator {
      * The 1st convert function prints the pounds to kilograms weight conversion, converts 186.2 pounds to 84.6363 kilos
      * The 1st convert function prints the pounds to kilograms weight conversion, converts 207 pounds to 94.0909 kilos
      * The final print statement is the total of two conversions in kilograms.
+     * @param args is a part of main method, for command arguments.
      */
     public static void main(String[] args) {
         System.out.println("Enter two numbers: ");

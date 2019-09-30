@@ -1,3 +1,7 @@
+/* SWEN-601
+ * Condy Kan
+ * ck2860@rit.edu
+ */
 package activities.session02;
 
 public class PetNames {
@@ -14,6 +18,7 @@ public class PetNames {
     }
     /**
      * it prints the sayPetName function three times.
+     * @param args is a part of main method, for command arguments.
      */
     public static void main(String[] args) {
         sayPetName();
